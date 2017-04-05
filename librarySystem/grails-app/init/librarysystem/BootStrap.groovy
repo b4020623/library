@@ -5,7 +5,7 @@ import com.zafzal.Book
 import com.zafzal.BookReview
 import com.zafzal.Course
 import com.zafzal.Library
-
+import com.zafzal.Student
 class BootStrap {
 
 def init = { servletContext ->
@@ -19,8 +19,8 @@ def init = { servletContext ->
 	new Course(title:'Biology', code:'Bio', leader:'Kenny S', department:'Science', description:'Earn a degree based in Biology', studyMode:true).save()
 	new Library(building:'SHU', name:'SHU', address:'10 Owen Way', openingHours:'9am-6pm', location:'Owen Building', studySpaces:'60').save()
 	new Library(building:'Cantor', name:'Can', address:'10 Leaf Way', openingHours:'9am-6pm', location:'Cantor Building', studySpaces:'84').save()
-	
-	
+	new Student(name:'Fabian Saunders', email:'FS@email.com', username:'FSaunders', password:'kerbal', studentId:'666', course:'Geography').save()
+	new Student(name:'Charlie Lad', email:'Clad@email.com', username:'CharLad', password:'Game', studentId:'234', course:'Politics').save()
     }
     def destroy = {
     }
